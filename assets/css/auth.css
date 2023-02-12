@@ -1,0 +1,20 @@
+.login,
+.image {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: url('https://images.pexels.com/photos/4126761/pexels-photo-4126761.jpeg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.pwd-sth{
+  width: 93%;
+  margin-left: calc(7% / 2);
+  height: 6px;
+  border-radius: 0 0 30px 30px;
+}
+
+
+  
