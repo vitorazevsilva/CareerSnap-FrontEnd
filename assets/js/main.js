@@ -9,3 +9,13 @@ else
 $(document).ready(function() {
     $(":input").inputmask();
 });
+
+const toastError = (message, duration = 5, cb = () => {}) => {
+    $("body").overhang({
+        type: "error",
+        message: message,
+        duration: duration,
+        upper: true,
+        callback: cb
+    });
+}

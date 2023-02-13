@@ -1,7 +1,14 @@
-.hide{
+.hide {
     display: none;
 }
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.pwd-sth {
+    width: 93%;
+    margin-left: calc(7% / 2);
+    height: 6px;
+    border-radius: 0 0 30px 30px;
 }

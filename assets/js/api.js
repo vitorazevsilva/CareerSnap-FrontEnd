@@ -7,6 +7,15 @@ const API = {
             _signin: 'auth/signin',
             _recovery: 'auth/recovery'
         },
+        _user: "v1/user",
+        experience: {
+            _base: 'v1/experience',
+            search: 'v1/experience/search',
+        },
+        skill: {
+            _base: 'v1/skill',
+            search: 'v1/skill/search',
+        }
     },
 
     postData: async(url = '', data = {}, token = null) => {

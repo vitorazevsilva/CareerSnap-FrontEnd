@@ -12,7 +12,7 @@ $(document).ready(() => {
     // *******          Initial Actions           *******
     // **************************************************
 
-    if (_Token) throw window.location.replace("./home.html");
+    if (_Token) throw window.location.replace("./curriculum.html");
 
     //#######################################################
 
@@ -236,7 +236,7 @@ $(document).ready(() => {
             street: $('#signup-inputStreet').val(),
             city: $('#signup-inputCity').val(),
             state: $('#signup-inputState').val(),
-            zip_code: $('#signup-inputZipCode').val(),
+            zipCode: $('#signup-inputZipCode').val(),
         }
         data.country = countryNames[$('#signup-selectCountry').find('option:selected').val()]
         data.nationality = $('#signup-inputNationality').val();
@@ -247,7 +247,7 @@ $(document).ready(() => {
         if (!data.address.street) throw toastError("🏡 Please enter your street.");
         if (!data.address.city) throw toastError("🏡 Please enter your city.");
         if (!data.address.state) throw toastError("🏡 Please enter your state.");
-        if (!data.address.zip_code) throw toastError("🏡  Please enter your Zip code.");
+        if (!data.address.zipCode) throw toastError("🏡  Please enter your Zip code.");
         if (!data.country) throw toastError("🏳️ Please enter your full name.");
         if (!data.nationality) throw toastError("🏳️ Please enter your full name.");
         if (!data.phone) throw toastError("☎️ Please enter your full name.");
@@ -264,7 +264,7 @@ $(document).ready(() => {
                             duration: 3,
                             upper: false,
                             callback: () => {
-                                window.location.replace("./home.html");
+                                window.location.replace("./curriculum.html");
                             }
                         })
 
@@ -280,7 +280,7 @@ $(document).ready(() => {
         let data = {}
         data.email = $('#signin-inputEmail').val();
         data.password = $('#signin-inputPassword').val();
-        let remember = $('#signup-inputType').is(':checked');
+        let remember = $('#signin-inputRemember').is(':checked');
 
         e.preventDefault();
         if (!validateEmail(data.email)) throw toastError("📧 Please enter valid email.");
@@ -298,7 +298,7 @@ $(document).ready(() => {
                             duration: 3,
                             upper: false,
                             callback: () => {
-                                window.location.replace("./home.html");
+                                window.location.replace("./curriculum.html");
                             }
                         })
                     };
@@ -312,15 +312,6 @@ $(document).ready(() => {
 // **************************************************
 // *******          Other Functions           *******
 // **************************************************
-
-const toastError = (message) => {
-    $("body").overhang({
-        type: "error",
-        message: message,
-        duration: 5,
-        upper: true
-    });
-}
 
 const validateEmail = (email) => {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

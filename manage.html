@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="./assets/js/api.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="//paulkr.github.io/overhang.js/dist/overhang.min.js"></script>
+    <link rel="stylesheet" href="//paulkr.github.io/overhang.js/dist/overhang.min.css">
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+    <script src="./assets/js/manage.js"></script>
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey">
+
+    <!-- Page Container -->
+    <div class="w3-content page-wrapper w3-margin-top" style="max-width:1400px;">
+        <div class="w3-row-padding">
+            <div class="row justify-content-center align-items-start g-2">
+                <div class="col-3"></div>
+                <div class="col">
+                    <div id="experience" class="w3-container w3-card w3-white w3-margin-bottom">
+                        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i><span id="title"></span></h2>
+                        <form id="experience-form" class="m-3 hide">
+                            <div class="form-group mb-3">
+                                <input id="experience-inputRole" type="text" placeholder="Role" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="experience-inputStartDate" data-inputmask="'mask': '9999/99/99'" type="text" placeholder="Start Date" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="experience-inputEndDate" data-inputmask="'mask': '9999/99/99'" type="text" placeholder="End Date" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="experience-inputCompany" type="text" placeholder="Company" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="experience-inputDescription" type="text" placeholder="Description" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <button id="experience-submitButton" type="submit" class="btn w3-teal w3-text-white w3-hover-border-teal w3-hover-white w3-hover-text-teal btn-block text-uppercase mb-2 rounded-pill shadow-sm"></button>
+                        </form>
+                        <form id="skill-form" class="m-3 hide">
+                            <div class="form-group mb-3">
+                                <input id="skill-inputDesignation" type="text" placeholder="Designation" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="skill-inputStartYear" data-inputmask="'mask': '9999'" type="text" placeholder="Start Year" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="skill-inputCompletionYear" data-inputmask="'mask': '9999'" type="text" placeholder="Completion Year" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="skill-inputInstitution" type="text" placeholder="Institution" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="skill-inputFieldOfStudy" type="text" placeholder="Field Of Study" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <button id="skill-submitButton" type="submit" class="btn w3-teal w3-text-white w3-hover-border-teal w3-hover-white w3-hover-text-teal btn-block text-uppercase mb-2 rounded-pill shadow-sm"></button>
+                        </form>
+                        <form id="profile-form" class="m-3 hide">
+                            <div class="form-group mb-3">
+                                <input id="profile-inputFullName" type="text" placeholder="Full Name" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="profile-inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="profile-inputBirthDate" class="form-control rounded-pill border-0 shadow-sm px-4" type="text" placeholder="Birth date" data-inputmask="'mask': '9999/99/99'" />
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="profile-inputStreet" class="form-control rounded-pill border-0 shadow-sm px-4" type="text" placeholder="Street" />
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="profile-inputCity" class="form-control rounded-pill border-0 shadow-sm px-4" type="text" placeholder="City" />
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="profile-inputState" class="form-control rounded-pill border-0 shadow-sm px-4" type="text" placeholder="State" />
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="profile-inputZipCode" class="form-control rounded-pill border-0 shadow-sm px-4" type="text" placeholder="Zip Code" />
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="profile-inputNationality" class="form-control rounded-pill border-0 shadow-sm px-4" type="text" placeholder="Nationality" />
+                            </div>
+                            <div class="form-group mb-3">
+                                <select id="profile-selectCountry" class="form-control rounded-pill border-0 shadow-sm px-4" aria-label="Default select example">
+                                    <option selected disabled>Country</option>
+                                  </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="profile-inputPhone" type="text" placeholder="Phone number" required="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <button id="profile-submitButton" type="submit" class="btn w3-teal w3-text-white w3-hover-border-teal w3-hover-white w3-hover-text-teal btn-block text-uppercase mb-2 rounded-pill shadow-sm"></button>
+                            <a id="profile-passwordButton" type="button" class="btn w3-border-teal w3-hover-teal w3-text-teal  btn-block text-uppercase mb-2 rounded-pill shadow-sm">Edit Password</a>
+                        </form>
+                        <form id="password-form" class="m-3 hide">
+                            <div class="form-group mb-3">
+                                <input id="password-inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                <div class="progress pwd-sth">
+                                    <div id="passwordStrength" class="progress-bar " role="progressbar"></div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input id="password-input2Password" type="password" placeholder="Replay password" required="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                            </div>
+                            <button id="password-submitButton" type="submit" class="btn w3-teal w3-text-white w3-hover-border-teal w3-hover-white w3-hover-text-teal btn-block text-uppercase mb-2 rounded-pill shadow-sm"></button>
+                            <a id="password-passwordButton" type="button" class="btn w3-border-teal w3-hover-teal w3-text-teal  btn-block text-uppercase mb-2 rounded-pill shadow-sm">Back</a>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
